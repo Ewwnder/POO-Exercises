@@ -1,4 +1,5 @@
 
+import fatec.poo.model.FuncionarioComissionado;
 import fatec.poo.model.FuncionarioHorista;
 import fatec.poo.model.FuncionarioMensalista;
 import java.text.DecimalFormat; //Fazemos o import de algo que já vem com o JDK
@@ -41,6 +42,22 @@ public class Aplic {
         System.out.println("Salário Bruto => " + df.format(objFunMen.calcSalBruto()));
         System.out.println("Desconto => " + df.format(objFunMen.calcDesconto()));
         System.out.println("Salário Líquido => " + df.format(objFunMen.calcSalLiquido()));
+        
+        FuncionarioComissionado objFunCom = new FuncionarioComissionado(3030, "Francisco Amaral", "15/01/1981", 8.0);
+        
+        objFunCom.setCargo("Engenheiro Elétrico");
+        objFunCom.setSalBase(2000.0);
+        objFunCom.addVendas(7500);
+        
+        System.out.println("\n--Funcionário Comissionado--\n");
+        System.out.println("Registro: " + objFunCom.getRegistro());
+        System.out.println("Nome: " + objFunCom.getNome());
+        System.out.println("Data Admissão: " + objFunCom.getDtAdmissao());
+        System.out.println("Cargo: " + objFunCom.getCargo());
+        System.out.println("Salário Bruto => " + df.format(objFunCom.calcSalBruto()));
+        System.out.println("Desconto => " + df.format(objFunCom.calcDesconto()));
+        System.out.println("Gratificação => " + df.format(objFunCom.calcGratificacao()));
+        System.out.println("Salário Líquido => " + df.format(objFunCom.calcSalLiquido()));
         
     }
     
