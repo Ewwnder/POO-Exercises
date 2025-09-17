@@ -9,8 +9,8 @@ public class FuncionarioHorista extends Funcionario{
     private double valHorTrab;
     private int qtdeHorTrab;
     
-    public FuncionarioHorista(int r, String n, String dtAdm, String c, double vht){
-        super(r, n, dtAdm, c);
+    public FuncionarioHorista(int r, String n, String dtAdm, double vht){
+        super(r, n, dtAdm);
         valHorTrab = vht;
     }
     
@@ -27,7 +27,8 @@ public class FuncionarioHorista extends Funcionario{
         return calcSalBruto()*0.075;
     }
     
+    //Polimorfismo e utilizando método calcSalLiquido que já está 66,66% pronta, apenas adicionando a Gratificação.
     public double calcSalLiquido(){
-        return calcSalBruto()+calcGratificacao()-calcDesconto();
+        return super.calcSalLiquido() + calcGratificacao();
     }
 }
