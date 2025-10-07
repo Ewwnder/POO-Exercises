@@ -3,6 +3,7 @@ import fatec.poo.model.Departamento;
 import fatec.poo.model.FuncionarioComissionado;
 import fatec.poo.model.FuncionarioHorista;
 import fatec.poo.model.FuncionarioMensalista;
+import fatec.poo.model.Projeto;
 
 /**
  *
@@ -65,6 +66,19 @@ public class Aplic {
         dep2.addFuncionario(funcCom);
         
         dep2.listarFuncionario();
+        
+        
+        //Adicionando parte de Projeto
+        
+        Projeto objProj1 = new Projeto(1111, "Sistema de Aplicativo Urbano");
+        objProj1.setDtInicio("22/04/2025");
+        objProj1.setDtTermino("14/12/2026");
+        
+        objProj1.addFuncionario(funcHor);
+        objProj1.addFuncionario(funcMen);
+        objProj1.addFuncionario(funcCom);
+        
+        objProj1.listarFuncionarios();
       
     
     }    

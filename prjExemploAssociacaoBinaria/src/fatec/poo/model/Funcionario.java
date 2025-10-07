@@ -10,6 +10,8 @@ abstract public class Funcionario {
     private String dtAdmissao;  
     private String cargo;
     private Departamento departamento; //Ponteiro que armazena o endereço de um objeto da classe Departamento
+    private Projeto projeto;
+    
     
     public Funcionario(int r, String n, String dtAdm){
         registro = r;
@@ -31,6 +33,14 @@ abstract public class Funcionario {
     }
     public void setCargo(String c){
         cargo = c;
+    }
+    
+    public Projeto getProjeto(){
+        return projeto;
+    }
+    
+    public void setProjeto(Projeto projeto){
+        this.projeto = projeto;
     }
     
     public abstract double calcSalBruto();
