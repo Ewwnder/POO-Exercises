@@ -78,6 +78,15 @@ public class Aplic {
         objProj1.addFuncionario(funcMen);
         objProj1.addFuncionario(funcCom);
         
+        funcHor.setProjeto(objProj1);
+        funcMen.setProjeto(objProj1);
+        funcCom.setProjeto(objProj1);
+        
+        System.out.println("\n\nO funcionário " + funcHor.getNome() + " está trabalhando no projeto " + funcHor.getProjeto().getDescricao());
+        System.out.println("\nO funcionário " + funcMen.getNome() + " está trabalhando no projeto " + funcMen.getProjeto().getDescricao());
+        System.out.println("\nO funcionário " + funcCom.getNome() + " está trabalhando no projeto " + funcCom.getProjeto().getDescricao());
+        
+        
         objProj1.listarFuncionarios();
       
     
